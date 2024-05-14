@@ -85,10 +85,10 @@
             // Verificar el tipo de pasajero y establecer el costo final
             if ($objPasajero instanceof PasajeroVIP) {
                 // se estableces el precio para un pasajero VIP
-                $costoFinal =$objPasajero->darPorcentajeIncremento();  
+                $costoFinal =$objPasajero->incrementoPrecioPasajero();  
             } elseif ($objPasajero instanceof PasajeroEspecial) {
                 // Aquí estableces el precio para un pasajero especial
-                $costoFinal = $objPasajero->incrementoPrecio(); // descuento que se encuentra en su propia funcion 
+                $costoFinal = $objPasajero->incrementoPrecioPasajero(); // descuento que se encuentra en su propia funcion 
             } else {
                 
                 $costoFinal = $objPasajero->incrementoPrecioPasajero(); // incremento un 10% para pasajeros normales
