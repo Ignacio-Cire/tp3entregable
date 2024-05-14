@@ -38,8 +38,8 @@ class PasajeroEspecial extends Pasajero {
     /**Si el pasajero tiene necesidades especiales y requiere silla de ruedas, asistencia y comida especial entonces el pasaje tiene un incremento del 30%; si solo requiere uno de los servicios prestados entonces el incremento es del 15%. 
  */
 
-    public function incrementoPrecio (){
-        $importeFinal=0;
+    public function incrementoPrecioPasajero(){
+        $importeFinal=parent::darPorcentajeIncremento();//en caso de que no pase lo que dicen las condiciones retorna un pasajero normal
         $coleccion= $this->getServiciosEspeciales();
         $n=count ($coleccion);
         if ($coleccion==3) {
